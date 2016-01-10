@@ -70,6 +70,24 @@ Real convertDegreesToRadians( const Real angleInDegrees )
     return angleInDegrees * SML_PI / 180.0;
 }
 
+//! Convert degrees to hour-angle
+/*!
+ * Converts angles given in degrees to hour-angle. One hour-angle is equal
+ * to 15 degrees. The following formula will be used for conversion:
+ * \f[
+ *		\theta_{HA} = \theta_{Deg} * \frac{1}{15}
+ * \f]
+ *
+ * @tparam Real 				Real type
+ * @param  anglesInDegrees		Angle in Degree
+ * @return 						Angle in unit Hour-Angle  
+ */
+template < typename Real >
+Real convertDegreeToHourAngle( const Real angleInDegrees )
+{
+	return angleInDegrees * 1 / 15.0;
+} 
+
 } // namespace sml
 
 #endif // SML_BASIC_FUNCTIONS_HPP
